@@ -69,7 +69,7 @@ h4{
     margin-top: 5px ;
 }
 .container-left{
-    width: 15%;
+    width: 18.5%;
     float: left;
     background-color: rgb(233, 226, 226);
     margin-top: 30px;
@@ -94,3 +94,62 @@ h4{
 .container-left a:hover{
     color: red;
 }
+
+/*---*/
+
+.container-left-2{
+    margin-left: 281px;
+    clear: both;
+    float: left;
+    width: 13%;
+    background-color: rgb(233, 226, 226);
+    margin-top: 30px;
+}
+.container-left-2 ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.container-left-2 ul li{
+    padding: 5px 0;
+}
+.container-left-2 li a{
+    color: black;
+    text-decoration: none;
+    padding-left: 20px;
+}
+.container-left-2 a:hover{
+    color: red;
+}
+
+/*---*/
+h5{
+    
+    text-align: center;
+    margin-top: 10px ;
+}
+.container-left-bottom{
+    margin-left: 281px;
+    clear: both;
+    float: left;
+    width: 13%;
+    background-color: rgb(233, 226, 226);
+    margin-top: 30px;
+}
+.container-left-bottom ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.container-left-bottom ul li{
+    padding: 5px 0;
+}
+.container-left-bottom li a{
+    color: black;
+    text-decoration: none;
+    padding-left: 20px;
+}
+.container-left-bottom a:hover{
+    color: red;
+}
+
