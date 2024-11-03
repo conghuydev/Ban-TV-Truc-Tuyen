@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: rgb(255, 253, 115);
+    text-align: center;
+}
+
+.nav {
+    background-color: red;
+    justify-content: center;
+    width: 100%;
+}
+
+#main-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+#main-menu li a {
+    color: white;
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+i {
+    margin-right: 8px;
+}
+#main-menu input {
+    width: 300px;
+}
+
+#main-menu li a:hover {
+    color: black;
+}
+#main-menu li {
+    position: relative;
+}
+#main-menu li ul {
+    display: none;
+    position: absolute;
+    background-color: rgb(182, 103, 103);
+    width: 250px;
+    top: 100%;
+    left: 0;
+}
+#main-menu li:hover ul {
+    display: block;
+}
+#main-menu li ul li {
+    list-style: none;
+}
+#main-menu li ul li:last-child {
+    border-bottom: none;
+}
+#main-menu li ul li a {
+    padding: 10px 20px;
+}
+
+a {
+    text-decoration: none;
+}
+h4 {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.container-left {
+    width: 18.5%;
+    margin-right: 30px;
+    float: left;
+    background-color: rgb(233, 226, 226);
+    margin-top: 30px;
+}
+
+/* Change background color on hover */
+.container-left a:hover {
+    color: red; /* Optional: change text color for better visibility */
+}
+.container-left a.active {
+    color: red; /* Optional: change text color for better visibility */
+}
+.container-left ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.container-left ul li {
+    padding: 5px 0;
+}
+.container-left li a {
+    color: black;
+    text-decoration: none;
+    padding-left: 20px;
+}
+.container-left img {
+    width: 23px;
+    height: 20px;
+}
+.container-left a:hover {
+    color: red;
+}
+
+.container-left-2 {
+    margin-left: 295px;
+    clear: both;
+    float: left;
+    width: 13%;
+    background-color: rgb(233, 226, 226);
+    margin-top: 30px;
+}
+
+.container-left-2 ul {
+    list-style: none; /* Không hiển thị dấu đầu dòng */
+    padding: 0; /* Xóa padding mặc định */
+    margin: 0; /* Xóa margin mặc định */
+}
+
+.container-left-2 ul li {
+    padding: 5px 0; /* Khoảng cách giữa các mục */
+    margin-left: 30px;
+}
+
+.container-left-2 a {
+    color: black; /* Màu chữ mặc định */
+    text-decoration: none; /* Xóa gạch chân */
+    padding-left: 5px; /* Giảm khoảng cách bên trái */
+    margin-left: 0; /* Xóa margin bên trái */
+}
+
+.container-left-2 a:hover {
+    color: red; /* Màu chữ khi hover */
+}
+
+.container-left-2 a.active {
+    color: red; /* Màu chữ giữ khi checkbox được chọn */
+}
+
+.container-left-2 input[type="checkbox"] {
+    margin-right: 5px; /* Giảm khoảng cách giữa checkbox và văn bản */
+    cursor: pointer; /* Thay đổi con trỏ khi hover vào checkbox */
+}
+
+.container-left-2 ul li {
+    display: flex; /* Sử dụng flexbox để căn chỉnh checkbox và label */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+h5 {
+    text-align: center;
+    margin-top: 10px;
+}
+.container-left-bottom {
+    margin-left: 295px;
+    clear: both;
+    float: left;
+    width: 13%;
+    background-color: rgb(233, 226, 226);
+    margin-top: 30px;
+}
+.container-left-bottom ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.container-left-bottom ul li {
+    padding: 5px 0;
+}
+.container-left-bottom li a {
+    color: black;
+    text-decoration: none;
+    padding-left: 20px;
+}
+.container-left-bottom a:hover {
+    color: red;
+}
+.cart-container {
+    position: fixed;
+    right: 20px;
+    top: 100px; /* Điều chỉnh vị trí tùy theo nhu cầu */
+    width: 300px; /* Điều chỉnh chiều rộng tùy theo nhu cầu */
+    background-color: #fff; /* Màu nền */
+    border: 1px solid #ccc; /* Viền */
+    padding: 20px; /* Khoảng cách bên trong */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Bóng đổ */
+    z-index: 1000; /* Đảm bảo giỏ hàng nằm trên các phần khác */
+}
+
+.cart-container h4 {
+    margin-bottom: 10px;
+}
+
+.cart-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-container li {
+    display: flex;
+    justify-content: space-between; /* Căn chỉnh giữa tên sản phẩm và giá */
+    margin-bottom: 10px;
+}
+
+.cart-container .total-price {
+    margin-top: 10px;
+    font-weight: bold;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Nền mờ */
+    display: flex; /* Hiển thị modal */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.modal-container {
+    background: white; /* Nền trắng cho modal */
+    padding: 20px;
+    border-radius: 8px; /* Bo góc cho modal */
+}
+.form-close {
+    cursor: pointer;
+    float: right;
+}
+
+/* Header Middle Right */
+.header-middle-right-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 10px;
+    color: var(--red);
+    position: relative;
+    color: white;
+}
+
+.header-middle-right-item:hover .header-middle-right-menu {
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.header-middle-right-item.close {
+    display: none;
+}
+
+.auth-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Keep it hidden by default */
+    position: fixed; /* Fixed positioning for modal */
+    z-index: 1000; /* High z-index to appear above other content */
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly darker background */
+}
+
+.modal-container {
+    background-color: #fefefe; 
+    margin: 5% auto; /* Thay đổi margin top để tạo khoảng cách từ trên */
+    padding: 20px; 
+    border: 1px solid #888; 
+    width: 80%; 
+    max-width: 400px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    position: relative; 
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Hiệu ứng chuyển tiếp cho modal */
+}
+
+.form-close {
+    position: absolute; 
+    top: 10px; 
+    right: 20px; 
+    border: none; 
+    background: none; 
+    font-size: 24px; 
+    cursor: pointer; 
+}
+
+.form-submit {
+    margin-top: 15px; 
+}
+
+/* Product List */
+.container-right {
+    padding: 20px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép cuộn xuống dòng mới khi đầy */
+    justify-content: space-between; /* Căn chỉnh các sản phẩm cách đều */
+}
+
+.product-item {
+    flex: 0 1 calc(25% - 10px); /* Mỗi sản phẩm chiếm 25% chiều rộng với khoảng cách */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tạo bóng cho sản phẩm */
+    border-radius: 5px; /* Bo tròn góc */
+    margin-bottom: 20px; /* Khoảng cách dưới mỗi sản phẩm */
+    padding: 10px; /* Padding cho nội dung bên trong sản phẩm */
+    background-color: #fff; /* Màu nền trắng cho sản phẩm */
+    position: relative; /* Để sử dụng cho vị trí của nút thêm vào giỏ hàng */
+    overflow: hidden; /* Ẩn phần ngoài của sản phẩm */
+}
+
+.product-image {
+    width: 100%;
+    height: 200px; /* Hoặc bất kỳ chiều cao nào phù hợp */
+    object-fit: cover; /* Đảm bảo hình ảnh lấp đầy khung mà không bị méo */
+}
+
+.product-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.product-price {
+    color: #f00; /* Màu đỏ cho giá */
+    font-weight: bold;
+}
+
+.btn {
+    width: 100%; /* Đảm bảo nút chiếm toàn bộ chiều rộng */
+}
+
+

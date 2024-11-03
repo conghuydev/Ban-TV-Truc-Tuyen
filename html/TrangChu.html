@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="/img/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/TrangChu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Thế Giới TV</title>
+</head>
+
+<body>
+    <div class="wraper">
+        <div class="header">
+            <img src="/img/Banner-back-to-school-1236x60.png" alt="">
+        </div>
+        <div class="nav">
+            <ul id="main-menu">
+                <li>
+                    <a href="/html/TrangChu.html">
+                        <h1>TIVI</h1>
+                    </a>
+                </li>
+                <li>
+                    <a href=""><input type="search" name="" id="" placeholder="Bạn cần tìm kiếm sản phẩm gì?"><button>Tìm kiếm</button></a>
+                </li>
+                <li><a href=""><i class="fa-solid fa-phone"></i>Hotline</a>
+                    <ul class="sub-menu">
+                        <li>Email: huy534876@gmail.com</li>
+                        <li>SĐT: 037738289</li>
+                        <li>Thời gian: 8h00-19h00</li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;" id="cart-button"><i class="fa-solid fa-cart-shopping"></i>Giỏ hàng (<span id="cart-count">0</span>)</a></li>
+
+                <li><a href=""><i class="fa-solid fa-microchip"></i>24H Công nghệ</a></li>
+                <li><a href=""><i class="fa-solid fa-pen-to-square"></i>Lịch sử đơn hàng</a></li>
+                <li class="header-middle-right-item dropdown open">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <div class="auth-container">
+                        <span class="text-dndk">Đăng nhập / Đăng ký</span>
+                        <span class="text-tk">Tài khoản <i class="fa-sharp fa-solid fa-caret-down"></i></span>
+                    </div>
+                    <ul class="header-middle-right-menu">
+                        <li><a id="login" href="javascript:;"><i class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a></li>
+                        <li><a id="signup" href="javascript:;"><i class="fa fa-user-plus" aria-hidden="true"></i> Đăng ký</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="modal cart-modal" style="display: none;">
+            <div class="modal-container">
+                <button class="form-close" onclick="closeCartModal()"><i class="fa-regular fa-xmark"></i></button>
+                <div class="form-content">
+                    <h3 class="form-title">Giỏ hàng của bạn</h3>
+                    <ul id="cart-items">
+                        <!-- Các sản phẩm trong giỏ hàng sẽ được thêm vào đây -->
+                    </ul>
+                    <div class="total-price">
+                        <strong>Tổng tiền: <span id="total">0 VNĐ</span></strong>
+                    </div>
+                    <button class="btn btn-primary" onclick="checkout()">Thanh toán</button>
+                </div>
+            </div>
+        </div>
+        
+         
+        <div class="modal login-modal">
+            <div class="modal-container">
+                <button class="form-close" onclick="closeModal()"><i class="fa-regular fa-xmark"></i></button>
+                <div class="form-content login">
+                    <h3 class="form-title">Đăng nhập tài khoản</h3>
+                    <p class="form-description">Đăng nhập thành viên để mua hàng và nhận những ưu đãi đặc biệt từ chúng tôi</p>
+                    <form action="" class="login-form">
+                        <div class="form-group">
+                            <label for="phone-login" class="form-label">Số điện thoại</label>
+                            <input id="phone-login" name="phone" type="text" placeholder="Nhập số điện thoại" class="form-control">
+                            <span class="form-message phonelog"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="password-login" class="form-label">Mật khẩu</label>
+                            <input id="password-login" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+                            <span class="form-message-check-login form-message"></span>
+                        </div>
+                        <button class="form-submit" id="login-button">Đăng nhập</button>
+                    </form>
+                    <p class="change-login">Bạn chưa có tài khoản? <a href="javascript:;" onclick="openSignupModal()">Đăng ký ngay</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal đăng ký -->
+        <div class="modal signup-modal">
+            <div class="modal-container">
+                <button class="form-close" onclick="closeModal()"><i class="fa-regular fa-xmark"></i></button>
+                <div class="form-content signup">
+                    <h3 class="form-title">Đăng ký tài khoản</h3>
+                    <p class="form-description">Đăng ký thành viên để trải nghiệm mua sắm và nhận ưu đãi từ chúng tôi</p>
+                    <form action="" class="signup-form">
+                        <div class="form-group">
+                            <label for="phone-signup" class="form-label">Số điện thoại</label>
+                            <input id="phone-signup" name="phone" type="text" placeholder="Nhập số điện thoại" class="form-control">
+                            <span class="form-message phonesignup"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="password-signup" class="form-label">Mật khẩu</label>
+                            <input id="password-signup" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+                            <span class="form-message-check-signup form-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password-signup" class="form-label">Xác nhận mật khẩu</label>
+                            <input id="confirm-password-signup" name="confirm-password" type="password" placeholder="Nhập lại mật khẩu" class="form-control">
+                            <span class="form-message-check-confirm form-message"></span>
+                        </div>
+                        <button class="form-submit" id="signup-button">Đăng ký</button>
+                    </form>
+                    <p class="change-login">Bạn đã có tài khoản? <a href="javascript:;" onclick="openLoginModal()">Đăng nhập</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="container-left">
+            <h4>TIVI</h4>
+            <hr>
+            <ul>
+                <li><a href=""><img src="/img/sámung.png" alt=""> Tivi Samsung</a></li>
+                <li><a href=""><img src="/img/LG.png" alt=""> Tivi LG</a></li>
+                <li><a href=""><img src="/img/sony.png" alt=""> Tivi Sony</a></li>
+                <li><a href=""><img src="/img/xiaomi.png" alt=""> Tivi Xiaomi</a></li>
+                <li><a href=""><img src="/img/aqua.png" alt=""> Tivi Aqua</a></li>
+                <li><a href=""><img src="/img/TLC.png" alt=""> Tivi Toshiba</a></li>
+                <li><a href=""><img src="/img/sámung.png" alt=""> Tivi TCL</a></li>
+                <li><a href=""><img src="/img/TLC.png" alt=""> Tivi Coocaa</a></li>
+                <li><a href=""><img src="/img/xiaomi.png" alt=""> Tivi Sharp</a></li>
+                <li><a href=""><img src="/img/aqua.png" alt=""> Tivi Hisense</a></li>
+                <li><a href=""><img src="/img/xiaomi.png" alt=""> Tivi Darling</a></li>
+                <li><a href=""><img src="/img/sony.png" alt=""> Tivi Asanzo</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container-left-2">
+        <h4>KHOẢNG GIÁ (VNĐ)</h4>
+        <hr>
+        <ul>
+            <li>
+                <input type="checkbox" id="price1">
+                <label for="price1"><a href="">3 triệu - 5 triệu</a></label>
+            </li>
+            <li>
+                <input type="checkbox" id="price2">
+                <label for="price2"><a href="">5 triệu - 8 triệu</a></label>
+            </li>
+            <li>
+                <input type="checkbox" id="price3">
+                <label for="price3"><a href="">8 triệu - 10 triệu</a></label>
+            </li>
+            <li>
+                <input type="checkbox" id="price4">
+                <label for="price4"><a href="">10 triệu - 15 triệu</a></label>
+            </li>
+            <li>
+                <input type="checkbox" id="price5">
+                <label for="price5"><a href="">15 triệu - 20 triệu</a></label>
+            </li>
+            <li>
+                <input type="checkbox" id="price6">
+                <label for="price6"><a href="">20 triệu - 25 triệu</a></label>
+            </li>
+            <li>
+                <input type="checkbox" id="price7">
+                <label for="price7"><a href="">25 triệu - 30 triệu</a></label>
+            </li>
+            <li>
+                <input type="checkbox" id="price8">
+                <label for="price8"><a href="">30 triệu - 40 triệu</a></label>
+            </li>
+            <li>
+                <input type="checkbox" id="price9">
+                <label for="price9"><a href="">50 triệu - 100 triệu</a></label>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="container-left-bottom">
+        <h5>KÍCH THƯỚC MÀN HÌNH</h5>
+        <hr>
+        <ul>
+            <li>
+                <a href=""><img src="" alt=""><input type="checkbox"> 32 inch</a>
+            </li>
+            <li>
+                <a href=""><img src="" alt=""><input type="checkbox"> 40 inch</a>
+            </li>
+            <li>
+                <a href=""><img src="" alt=""><input type="checkbox"> 43 inch</a>
+            </li>
+            <li>
+                <a href=""><img src="" alt=""><input type="checkbox"> 50 inch</a>
+            </li>
+            <li>
+                <a href=""><img src="" alt=""><input type="checkbox"> 55 inch</a>
+            </li>
+            <li>
+                <a href=""><img src="" alt=""><input type="checkbox"> 65 inch</a>
+            </li>
+            <li>
+                <a href=""><img src="" alt=""><input type="checkbox"> 70 inch</a>
+            </li>
+            <li>
+                <a href=""><img src="" alt=""><input type="checkbox"> 75 inch</a>
+            </li>
+            <li>
+                <a href=""><img src="" alt=""><input type="checkbox"> 85 inch</a>
+            </li>
+        </ul>
+        <hr>
+        <h5>ĐỘ PHÂN GIẢI</h5>
+        <hr>
+        <ul>
+            <li>
+                <a href=""><img src="" alt=""><input type="checkbox"> HD</a>
+            </li>
+            <li>
+                <a href=""><img src="" alt=""><input type="checkbox"> Full HD</a>
+            </li>
+            <li>
+                <a href=""><img src="" alt=""><input type="checkbox"> 4K</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="container-right" id="product-list">
+        <h4>Sản phẩm nổi bật</h4>
+        <hr>
+        <div class="product-list" id="product-list-content">
+            <!-- Danh sách sản phẩm sẽ được hiển thị ở đây -->
+        </div>
+    </div>
+    
+    
+    
+</body>
+<script src="../js/TrangChu.js"></script>
+<script src="../js/Login.js"></script>
+<script src="../js/ListSanPham.js"></script>
+
+</html>
