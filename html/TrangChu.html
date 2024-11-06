@@ -36,7 +36,7 @@
                 </li>
                 <li><a href="javascript:;" id="cart-button"><i class="fa-solid fa-cart-shopping"></i>Giỏ hàng (<span id="cart-count">0</span>)</a></li>
 
-                <li><a href=""><i class="fa-solid fa-microchip"></i>24H Công nghệ</a></li>
+                <li><a href="../html/ThongTinCongNghe.html"><i class="fa-solid fa-microchip"></i>24H Công nghệ</a></li>
                 <li><a href=""><i class="fa-solid fa-pen-to-square"></i>Lịch sử đơn hàng</a></li>
                 <li class="header-middle-right-item dropdown open">
                     <i class="fa fa-user" aria-hidden="true"></i>
@@ -127,18 +127,18 @@
             <h4>TIVI</h4>
             <hr>
             <ul>
-                <li><a href=""><img src="/img/sámung.png" alt=""> Tivi Samsung</a></li>
-                <li><a href=""><img src="/img/LG.png" alt=""> Tivi LG</a></li>
-                <li><a href=""><img src="/img/sony.png" alt=""> Tivi Sony</a></li>
-                <li><a href=""><img src="/img/xiaomi.png" alt=""> Tivi Xiaomi</a></li>
-                <li><a href=""><img src="/img/aqua.png" alt=""> Tivi Aqua</a></li>
-                <li><a href=""><img src="/img/TLC.png" alt=""> Tivi Toshiba</a></li>
-                <li><a href=""><img src="/img/sámung.png" alt=""> Tivi TCL</a></li>
-                <li><a href=""><img src="/img/TLC.png" alt=""> Tivi Coocaa</a></li>
-                <li><a href=""><img src="/img/xiaomi.png" alt=""> Tivi Sharp</a></li>
-                <li><a href=""><img src="/img/aqua.png" alt=""> Tivi Hisense</a></li>
-                <li><a href=""><img src="/img/xiaomi.png" alt=""> Tivi Darling</a></li>
-                <li><a href=""><img src="/img/sony.png" alt=""> Tivi Asanzo</a></li>
+                <li><a href="javascript:;" onclick="filterProducts('Samsung')"><img src="/img/sámung.png" alt=""> Tivi Samsung</a></li>
+                <li><a href="javascript:;" onclick="filterProducts('LG')"><img src="/img/LG.png" alt=""> Tivi LG</a></li>
+                <li><a href="javascript:;" onclick="filterProducts('Sony')"><img src="/img/sony.png" alt=""> Tivi Sony</a></li>
+                <li><a href="javascript:;" onclick="filterProducts('Xiaomi')"><img src="/img/xiaomi.png" alt=""> Tivi Xiaomi</a></li>
+                <li><a href="javascript:;" onclick="filterProducts('Aqua')"><img src="/img/aqua.png" alt=""> Tivi Aqua</a></li>
+                <li><a href="javascript:;" onclick="filterProducts('Toshiba')"><img src="/img/TLC.png" alt=""> Tivi Toshiba</a></li>
+                <li><a href="javascript:;" onclick="filterProducts('TCL')"><img src="/img/sámung.png" alt=""> Tivi TCL</a></li>
+                <li><a href="javascript:;" onclick="filterProducts('Coocaa')"><img src="/img/TLC.png" alt=""> Tivi Coocaa</a></li>
+                <li><a href="javascript:;" onclick="filterProducts('Sharp')"><img src="/img/xiaomi.png" alt=""> Tivi Sharp</a></li>
+                <li><a href="javascript:;" onclick="filterProducts('Hisense')"><img src="/img/aqua.png" alt=""> Tivi Hisense</a></li>
+                <li><a href="javascript:;" onclick="filterProducts('Darling')"><img src="/img/xiaomi.png" alt=""> Tivi Darling</a></li>
+                <li><a href="javascript:;" onclick="filterProducts('Asanzo')"><img src="/img/sony.png" alt=""> Tivi Asanzo</a></li>
             </ul>
         </div>
     </div>
@@ -148,73 +148,74 @@
         <ul>
             <li>
                 <input type="checkbox" id="price1">
-                <label for="price1"><a href="">3 triệu - 5 triệu</a></label>
+                <label for="price1"><a href="javascript:void(0);" onclick="filterByPrice(3000000, 5000000)">3 triệu - 5 triệu</a></label>
             </li>
             <li>
                 <input type="checkbox" id="price2">
-                <label for="price2"><a href="">5 triệu - 8 triệu</a></label>
+                <label for="price2"><a href="javascript:void(0);" onclick="filterByPrice(5000000, 8000000)">5 triệu - 8 triệu</a></label>
             </li>
             <li>
                 <input type="checkbox" id="price3">
-                <label for="price3"><a href="">8 triệu - 10 triệu</a></label>
+                <label for="price3"><a href="javascript:void(0);" onclick="filterByPrice(8000000, 10000000)">8 triệu - 10 triệu</a></label>
             </li>
             <li>
                 <input type="checkbox" id="price4">
-                <label for="price4"><a href="">10 triệu - 15 triệu</a></label>
+                <label for="price4"><a href="javascript:void(0);" onclick="filterByPrice(10000000, 15000000)">10 triệu - 15 triệu</a></label>
             </li>
             <li>
                 <input type="checkbox" id="price5">
-                <label for="price5"><a href="">15 triệu - 20 triệu</a></label>
+                <label for="price5"><a href="javascript:void(0);" onclick="filterByPrice(15000000, 20000000)">15 triệu - 20 triệu</a></label>
             </li>
             <li>
                 <input type="checkbox" id="price6">
-                <label for="price6"><a href="">20 triệu - 25 triệu</a></label>
+                <label for="price6"><a href="javascript:void(0);" onclick="filterByPrice(20000000, 25000000)">20 triệu - 25 triệu</a></label>
             </li>
             <li>
                 <input type="checkbox" id="price7">
-                <label for="price7"><a href="">25 triệu - 30 triệu</a></label>
+                <label for="price7"><a href="javascript:void(0);" onclick="filterByPrice(25000000, 30000000)">25 triệu - 30 triệu</a></label>
             </li>
             <li>
                 <input type="checkbox" id="price8">
-                <label for="price8"><a href="">30 triệu - 40 triệu</a></label>
+                <label for="price8"><a href="javascript:void(0);" onclick="filterByPrice(30000000, 40000000)">30 triệu - 40 triệu</a></label>
             </li>
             <li>
                 <input type="checkbox" id="price9">
-                <label for="price9"><a href="">50 triệu - 100 triệu</a></label>
+                <label for="price9"><a href="javascript:void(0);" onclick="filterByPrice(50000000, 100000000)">50 triệu - 100 triệu</a></label>
             </li>
         </ul>
     </div>
+    
     
     <div class="container-left-bottom">
         <h5>KÍCH THƯỚC MÀN HÌNH</h5>
         <hr>
         <ul>
             <li>
-                <a href=""><img src="" alt=""><input type="checkbox"> 32 inch</a>
+                <a href="javascript:void(0);" onclick="filterBySize('32 inch')"><input type="checkbox"> 32 inch</a>
             </li>
             <li>
-                <a href=""><img src="" alt=""><input type="checkbox"> 40 inch</a>
+                <a href="javascript:void(0);" onclick="filterBySize('40 inch')"><input type="checkbox"> 40 inch</a>
             </li>
             <li>
-                <a href=""><img src="" alt=""><input type="checkbox"> 43 inch</a>
+                <a href="javascript:void(0);" onclick="filterBySize('43 inch')"><input type="checkbox"> 43 inch</a>
             </li>
             <li>
-                <a href=""><img src="" alt=""><input type="checkbox"> 50 inch</a>
+                <a href="javascript:void(0);" onclick="filterBySize('50 inch')"><input type="checkbox"> 50 inch</a>
             </li>
             <li>
-                <a href=""><img src="" alt=""><input type="checkbox"> 55 inch</a>
+                <a href="javascript:void(0);" onclick="filterBySize('55 inch')"><input type="checkbox"> 55 inch</a>
             </li>
             <li>
-                <a href=""><img src="" alt=""><input type="checkbox"> 65 inch</a>
+                <a href="javascript:void(0);" onclick="filterBySize('65 inch')"><input type="checkbox"> 65 inch</a>
             </li>
             <li>
-                <a href=""><img src="" alt=""><input type="checkbox"> 70 inch</a>
+                <a href="javascript:void(0);" onclick="filterBySize('70 inch')"><input type="checkbox"> 70 inch</a>
             </li>
             <li>
-                <a href=""><img src="" alt=""><input type="checkbox"> 75 inch</a>
+                <a href="javascript:void(0);" onclick="filterBySize('75 inch')"><input type="checkbox"> 75 inch</a>
             </li>
             <li>
-                <a href=""><img src="" alt=""><input type="checkbox"> 85 inch</a>
+                <a href="javascript:void(0);" onclick="filterBySize('85 inch')"><input type="checkbox"> 85 inch</a>
             </li>
         </ul>
         <hr>
@@ -222,17 +223,17 @@
         <hr>
         <ul>
             <li>
-                <a href=""><img src="" alt=""><input type="checkbox"> HD</a>
+                <a href="javascript:void(0);" onclick="filterByResolution('HD')"><input type="checkbox"> HD</a>
             </li>
             <li>
-                <a href=""><img src="" alt=""><input type="checkbox"> Full HD</a>
+                <a href="javascript:void(0);" onclick="filterByResolution('Full HD')"><input type="checkbox"> Full HD</a>
             </li>
             <li>
-                <a href=""><img src="" alt=""><input type="checkbox"> 4K</a>
+                <a href="javascript:void(0);" onclick="filterByResolution('4K')"><input type="checkbox"> 4K</a>
             </li>
-            
         </ul>
     </div>
+    
     <div class="container-right" id="product-list">
         <h4>Sản phẩm nổi bật</h4>
         <hr>
