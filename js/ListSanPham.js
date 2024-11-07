@@ -123,13 +123,18 @@ function displayProducts(filteredProducts = products) {
         const productItem = document.createElement('div');
         productItem.className = 'product-item';
 
+        // Chuyển đến trang chi tiết khi click vào productItem (trừ nút "Thêm vào giỏ hàng")
+        productItem.addEventListener('click', function () {
+            window.location.href = `ChiTietSanPham.html?productIndex=${index}`;
+        });
+
         productItem.innerHTML = `
             <img src="${product.image}" alt="${product.name}" class="product-image">
             <h5 class="product-name">${product.name}</h5>
             <p class="product-size">Kích thước: ${product.size}</p>
             <p class="product-resolution">Độ phân giải: ${product.resolution}</p>
             <p class="product-price">${product.price.toLocaleString()} VNĐ</p>
-            <button class="btn btn-primary" onclick="addToCart(${index})">Thêm vào giỏ hàng</button>
+            <button class="btn btn-primary" onclick="event.stopPropagation(); addToCart(${index})">Thêm vào giỏ hàng</button>
         `;
 
         productListContent.appendChild(productItem);
