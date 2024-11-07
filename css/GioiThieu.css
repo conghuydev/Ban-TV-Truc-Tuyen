@@ -1,3 +1,39 @@
+.intro-container {
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 8px;
+}
+.founder-quote {
+    background-color: #e51c23;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    position: relative;
+    font-size: 18px;
+}
+.founder-quote::before, .founder-quote::after {
+    content: '“';
+    font-size: 24px;
+    color: white;
+    position: absolute;
+}
+.founder-quote::before {
+    top: -10px;
+    left: -10px;
+}
+.founder-quote::after {
+    content: '”';
+    bottom: -10px;
+    right: -10px;
+}
+.founder-info {
+    text-align: right;
+}
+.founder-image {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -103,88 +139,9 @@ h4 {
     flex-direction: column;
 }
 
-
-
-.topic-section {
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 20px;
-}
-.topic-section h6 {
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-}
-.topic-section h6 .icon {
-    margin-right: 8px;
-}
-.article-image {
-    border-radius: 10px;
-    overflow: hidden;
-}
-.article-title {
-    font-weight: bold;
-    margin-top: 10px;
-    font-size: 1.1rem;
-}
-.hot-topic-icon, .game-topic-icon {
-    color: red;
-    margin-left: 5px;
-}
-
-
-.article-item {
-    display: flex;
-    border-bottom: 1px solid #dee2e6;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
-}
-.article-item img {
-    width: 150px;
+.founder-image {
+    max-width: 100%;
+    width: 200px;
     height: auto;
-    border-radius: 5px;
-    margin-right: 15px;
-}
-.article-details {
-    flex: 1;
-}
-.article-title {
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-.meta-info {
-    color: #6c757d;
-    font-size: 0.9rem;
-}
-.quick-view-header, .tips-header {
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-}
-.sidebar-section {
-    padding: 15px;
-    margin-bottom: 20px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-}
-.sidebar-section h6 {
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    color: #ffffff;
-    padding: 10px;
     border-radius: 8px;
-}
-.quick-view-header {
-    background-color: #033660;
-}
-.tips-header {
-    background-color: #ffca28;
-    color: #212529;
-}
-.sidebar-links p {
-    font-weight: bold; 
-    font-size: 0.9rem;
-    margin: 0 0 10px 0;
 }

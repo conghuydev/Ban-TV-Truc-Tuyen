@@ -1,87 +1,87 @@
 const products = [
     {
-        name: "Tivi Samsung QLED 4K",
-        image: "/img/tivi-tcl-43-inch-43p755.jpg",
-        price: 15000000,
+        name: "Tivi Samsung 4K",
+        image: "/img/android-tivi-tcl-4k-65-inch-l65c8-sl1.jpg",
+        price: 14999999,
         size: "65 inch",
         resolution: "4K"
     },
     {
-        name: "Tivi LG OLED 4K",
-        image: "/img/android-tivi-qled-tcl-4k-55-inch-55c815.jpg",
-        price: 20000000,
+        name: "Tivi LG 4K",
+        image: "/img/LG.png",
+        price: 18999999,
         size: "55 inch",
         resolution: "4K"
     },
     {
         name: "Tivi Sony Bravia 4K",
         image: "/img/sámung.png",
-        price: 18000000,
-        size: "75 inch",
-        resolution: "Full HD"
-    },
-    {
-        name: "Tivi Xiaomi Mi TV 4K",
-        image: "/img/xiaomi_tv.png",
-        price: 12000000,
-        size: "50 inch",
-        resolution: "4K"
-    },
-    {
-        name: "Tivi Samsung QLED 4K",
-        image: "/img/tivi-tcl-43-inch-43p755.jpg",
-        price: 15000000,
-        size: "65 inch",
-        resolution: "4K"
-    },
-    {
-        name: "Tivi LG OLED 4K",
-        image: "/img/android-tivi-qled-tcl-4k-55-inch-55c815.jpg",
-        price: 20000000,
-        size: "55 inch",
-        resolution: "4K"
-    },
-    {
-        name: "Tivi Sony Bravia 4K",
-        image: "/img/sámung.png",
-        price: 18000000,
+        price: 17999999,
         size: "75 inch",
         resolution: "4K"
     },
     {
         name: "Tivi Xiaomi Mi TV 4K",
-        image: "/img/xiaomi_tv.png",
-        price: 12000000,
+        image: "/img/google-tivi-tcl-4k-50-inch-50p755.jpg",
+        price: 11999999,
         size: "50 inch",
         resolution: "4K"
     },
     {
-        name: "Tivi Samsung QLED HD",
-        image: "/img/tivi-tcl-43-inch-43p755.jpg",
+        name: "Tivi Samsung ",
+        image: "/img/google-tivi-qled-tcl-65-inch-65q636-2.jpg",
         price: 15000000,
         size: "65 inch",
         resolution: "HD"
     },
     {
-        name: "Tivi LG OLED 4K",
-        image: "/img/android-tivi-qled-tcl-4k-55-inch-55c815.jpg",
+        name: "Tivi LG ",
+        image: "/img/android-tivi-4k-tcl-55-inch-55p618-7.jpg",
         price: 20000000,
         size: "55 inch",
-        resolution: "4K"
+        resolution: "HD"
     },
     {
-        name: "Tivi Sony Bravia 4K",
+        name: "Tivi Sony Bravia ",
         image: "/img/sámung.png",
         price: 18000000,
         size: "75 inch",
-        resolution: "4K"
+        resolution: "HD"
     },
     {
-        name: "Tivi Xiaomi Mi TV 4K",
-        image: "/img/xiaomi_tv.png",
+        name: "Tivi Xiaomi Mi TV ",
+        image: "/img/xiaomi.png",
         price: 12000000,
         size: "50 inch",
-        resolution: "4K"
+        resolution: "HD"
+    },
+    {
+        name: "Tivi Samsung  ",
+        image: "/img/tivi-tcl-43-inch-43p755.jpg",
+        price: 15000000,
+        size: "65 inch",
+        resolution: "FULL HD"
+    },
+    {
+        name: "Tivi LG  ",
+        image: "/img/android-tivi-qled-tcl-4k-55-inch-55c815.jpg",
+        price: 20000000,
+        size: "55 inch",
+        resolution: "FULL HD"
+    },
+    {
+        name: "Tivi Sony Bravia ",
+        image: "/img/sámung.png",
+        price: 18000000,
+        size: "75 inch",
+        resolution: "FULL HD"
+    },
+    {
+        name: "Tivi Xiaomi Mi TV ",
+        image: "/img/xiaomi.png",
+        price: 12000000,
+        size: "50 inch",
+        resolution: "FULL HD"
     },
     {
         name: "Tivi Samsung QLED 4K",
@@ -106,7 +106,7 @@ const products = [
     },
     {
         name: "Tivi Xiaomi Mi TV 4K",
-        image: "/img/xiaomi_tv.png",
+        image: "/img/xiaomi.png",
         price: 12000000,
         size: "50 inch",
         resolution: "4K"
@@ -185,7 +185,8 @@ function showMoreButton(filteredProducts) {
     const productListContent = document.getElementById('product-list-content');
     const showMoreButton = document.createElement('button');
     showMoreButton.className = 'btn btn-secondary mt-3';
-    showMoreButton.innerText = 'Xem thêm';const products = [
+    showMoreButton.innerText = 'Xem thêm';
+    const products = [
         {
             name: "Tivi Samsung QLED 4K",
             image: "/img/tivi-tcl-43-inch-43p755.jpg",
@@ -209,7 +210,7 @@ function showMoreButton(filteredProducts) {
         },
         {
             name: "Tivi Xiaomi Mi TV 4K",
-            image: "/img/xiaomi_tv.png",
+            image: "/img/xiaomi.png",
             price: 12000000,
             size: "50 inch",
             resolution: "4K UHD"
@@ -327,8 +328,7 @@ function filterBySize(size) {
 }
 
 // Hàm lọc sản phẩm theo độ phân giải
-function filterByResolution(resolution) {
-    const filteredProducts = products.filter(product => product.resolution === resolution);
+function filterByResolution(resolution) {const filteredProducts = products.filter(product => product.resolution === resolution);
     displayProducts(filteredProducts);
 }
 
