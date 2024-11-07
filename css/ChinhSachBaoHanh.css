@@ -1,0 +1,21 @@
+.tab-content-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-top: none;
+}
+.form-control, .btn-primary {
+    border-radius: 4px;
+}
+.warranty-info {
+    font-size: 18px;
+    margin-top: 20px;
+}
+.warranty-info a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+footer{
+    width: 100%;
+}

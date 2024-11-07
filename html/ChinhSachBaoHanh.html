@@ -4,8 +4,178 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chính Sách Bảo Hành</title>
+    <link rel="stylesheet" href="../css/ChinhSachBaoHanh.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
 </head>
 <body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Chính sách bảo hành cho khách hàng mua trên Web</h2>
+        
+        <!-- Tabs -->
+        <ul class="nav nav-tabs" id="warrantyTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="check-warranty-tab" data-toggle="tab" href="#check-warranty" role="tab" aria-controls="check-warranty" aria-selected="true">Tra cứu phiếu bảo hành</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="check-imei-tab" data-toggle="tab" href="#check-imei" role="tab" aria-controls="check-imei" aria-selected="false">Tra cứu IMEI</a>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content-container">
+            <div class="tab-content" id="warrantyTabContent">
+                <!-- Tra cứu phiếu bảo hành -->
+                <div class="tab-pane fade show active" id="check-warranty" role="tabpanel" aria-labelledby="check-warranty-tab">
+                    <p>Quý khách vui lòng nhập cả 2 trường thông tin (bắt buộc) để tra cứu trạng thái của phiếu bảo hành.</p>
+                    <div class="form-row">
+                        <div class="col-md-5">
+                            <input type="text" class="form-control mb-2" placeholder="Số điện thoại">
+                        </div>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control mb-2" placeholder="Mã phiếu bảo hành">
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-primary w-100">Tra cứu</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tra cứu IMEI -->
+                <div class="tab-pane fade" id="check-imei" role="tabpanel" aria-labelledby="check-imei-tab">
+                    <p>Vui lòng nhập mã IMEI của sản phẩm để kiểm tra trạng thái bảo hành.</p>
+                    <div class="form-row">
+                        <div class="col-md-10">
+                            <input type="text" class="form-control mb-2" placeholder="Mã IMEI">
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-primary w-100">Tra cứu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thông tin bảo hành -->
+        <div class="warranty-info mt-4">
+            <p>Để thuận tiện cho việc tra cứu bảo hành các sản phẩm tại Web, xin kính gửi Quý khách hàng các thông tin chính sách bảo hành tại GEARVN và các thông tin liên hệ khi cần.</p>
+            <h5>1. Liên hệ bảo hành sản phẩm</h5>
+            <ul>
+                <li>Gọi tổng đài bảo hành <a href="tel:19005325">1900.5325</a>.</li>
+                <li>Gửi tin nhắn trực tiếp tại <a href="#">website</a> hoặc <a href="#">fanpage</a>.</li>
+                <li>Mang sản phẩm trực tiếp đến các chi nhánh cửa hàng hoặc Trung tâm bảo hành của GearVN.</li>
+                <li>Mang sản phẩm trực tiếp đến Trung tâm bảo hành/nhà cung cấp của sản phẩm.</li>
+            </ul>
+            
+        </div>
+        <div class="container mt-5">
+            <h2 class="mb-4">Chính sách bảo hành</h2>
     
+            <!-- Điều kiện bảo hành -->
+            <h4>2. Điều kiện bảo hành</h4>
+            <ul>
+                <li>Sản phẩm còn trong thời hạn bảo hành của GearVN; Thời hạn bảo hành được ghi nhận dựa trên <b>thông tin mua hàng</b>, <b>số Serial Number</b> của sản phẩm.</li>
+                <li>Sản phẩm phải còn tem niêm phong bảo hành hoặc tem của nhà phân phối. Với các sản phẩm cần bảo hành theo hộp, khách hàng phải giữ đầy đủ vỏ hộp và phụ kiện đi kèm.</li>
+                <li>Sản phẩm còn nguyên trạng, không trầy xước, cấn móp, biến dạng ngoài quy định của hãng/nhà phân phối.</li>
+                <li>Sản phẩm phát sinh lỗi trong quá trình sử dụng do nhà sản xuất như linh kiện, lỗi kỹ thuật.</li>
+            </ul>
+    
+            <!-- Lưu ý -->
+            <p class="note">Lưu ý:</p>
+            <ul>
+                <li>Các điều kiện bảo hành cụ thể có thể thay đổi tùy theo từng nhà sản xuất và nhà cung cấp sản phẩm.</li>
+                <li><span class="note">Dữ liệu (lưu trữ trong sản phẩm: Laptop/ Máy tính để bàn/ Thẻ nhớ/ Ổ cứng...) không thuộc phạm vi bảo hành. Chúng tôi hoàn toàn ý thức được tầm quan trọng của dữ liệu quý khách hàng và luôn cố gắng hết sức để hỗ trợ - hướng dẫn quý khách hàng trong việc sao lưu dữ liệu. GearVN không chịu trách nhiệm về bất cứ thiệt hại trực tiếp hoặc gián tiếp nào gây ra do việc khách hàng nếu lưu dữ liệu trong sản phẩm bị tiệt lộ, bị mất, hư hỏng trong quá trình kiểm tra, xử lý hoặc bảo hành.</span></li>
+                <li>Nên tham khảo kỹ phiếu bảo hành và chính sách bảo hành của nhà sản xuất trước khi sử dụng sản phẩm.</li>
+            </ul>
+    
+            <!-- Sản phẩm không đủ điều kiện bảo hành -->
+            <h4>3. Sản phẩm không đủ điều kiện bảo hành</h4>
+            <ul>
+                <li>Sản phẩm hết hạn bảo hành tại GearVN.</li>
+                <li>Sản phẩm không đầy đủ các thiết bị, linh kiện đi kèm bắt buộc (ví dụ: receiver, adapter...).</li>
+                <li>Sản phẩm không có thông tin mua hàng hoặc không phải do GearVN cung cấp, thông tin sản phẩm không đúng với phạm vi hỗ trợ bảo hành của GearVN.</li>
+                <li>Sản phẩm bị hư hỏng do lỗi người dùng (Rơi vỡ, cấn móp, biến dạng, vô nước ... hoặc sử dụng không theo hướng dẫn và chức năng của sản phẩm).</li>
+                <li>Sản phẩm bị thay đổi phần cứng, sửa chữa, tháo lắp hoặc thay đổi kết cấu từ bên thứ ba chưa được cho phép của GearVN và nhà phân phối sản phẩm.</li>
+                <li>Thông tin sản phẩm (Số Serial/IMEI/Service Tag) không còn hoặc không trùng khớp với thực tế sản phẩm.</li>
+            </ul>
+        </div>        
+    </div>
+    <footer class="bg-light text-dark mt-5">
+        <div class="container py-4">
+            <div class="row">
+               
+                <div class="col-md-2 mb-3">
+                    <h6 class="text-dark">VỀ TIVI</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="../html/GioiThieu.html" class="text-dark">Giới thiệu</a></li>
+                        <li><a href="#" class="text-dark">Tuyển dụng</a></li>
+                        <li><a href="#" class="text-dark">Black Friday 2024</a></li>
+                    </ul>
+                </div>
+    
+            
+                <div class="col-md-2 mb-3">
+                    <h6 class="text-dark">CHÍNH SÁCH</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark">Chính sách bảo hành</a></li>
+                        <li><a href="#" class="text-dark">Chính sách giao hàng</a></li>
+                        <li><a href="#" class="text-dark">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+    
+                
+                <div class="col-md-2 mb-3">
+                    <h6 class="text-dark">THÔNG TIN</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark">Hệ thống cửa hàng</a></li>
+                        <li><a href="#" class="text-dark">Hướng dẫn mua hàng</a></li>
+                        <li><a href="#" class="text-dark">Hướng dẫn thanh toán</a></li>
+                        <li><a href="#" class="text-dark">Hướng dẫn trả góp</a></li>
+                        <li><a href="#" class="text-dark">Tra cứu địa chỉ bảo hành</a></li>
+                    </ul>
+                </div>
+    
+               
+                <div class="col-md-3 mb-3">
+                    <h6 class="text-dark">TỔNG ĐÀI HỖ TRỢ (8:00 - 21:00)</h6>
+                    <ul class="list-unstyled">
+                        <li>Mua hàng: <a href="tel:19005301" class="text-blue">0937136221</a></li>
+                        <li>Bảo hành: <a href="tel:19005325" class="text-blue">0923738173</a></li>
+                        <li>Khiếu nại: <a href="tel:18006173" class="text-blue">1900.000</a></li>
+                        <li>Email: <a href="mailto:cskh@gearvn.com" class="text-blue">minhtruc@gmail.com</a></li>
+                    </ul>
+                </div>
+    
+              
+                <div class="col-md-3 mb-3">
+                    <h6 class="text-dark">ĐƠN VỊ VẬN CHUYỂN</h6>
+                    <div class="mb-3">
+                        <img src="https://theme.hstatic.net/200000722513/1001090675/14/ship_1.png?v=6640" alt="Logistic Partner 1" class="img-fluid" width="50">
+                        <img src="//theme.hstatic.net/200000722513/1001090675/14/ship_2.png?v=6640" alt="Logistic Partner 2" class="img-fluid" width="50">
+                        
+                       
+                    </div>
+                    <h6 class="text-dark">CÁCH THỨC THANH TOÁN</h6>
+                    <div>
+                        <img src="//theme.hstatic.net/200000722513/1001090675/14/pay_7.png?v=6640" alt="Payment Method 1" class="img-fluid" width="50">
+                        <img src="//theme.hstatic.net/200000722513/1001090675/14/pay_8.png?v=6640" alt="Payment Method 2" class="img-fluid" width="50">
+                        <img src="//theme.hstatic.net/200000722513/1001090675/14/pay_5.png?v=6640" alt="Logistic Partner 2" class="img-fluid" width="50">
+                    </div>
+                </div>
+            </div>
+    
+          
+            <div class="text-center">
+                <h6 class="text-dark">KẾT NỐI VỚI CHÚNG TÔI</h6>
+                <a href="#" class="text-dark me-3"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-dark me-3"><i class="bi bi-tiktok"></i></a>
+                <a href="#" class="text-dark me-3"><i class="bi bi-youtube"></i></a>
+                <a href="#" class="text-dark"><i class="bi bi-wechat"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
