@@ -13,7 +13,11 @@
     <link rel="stylesheet" href="../css/TuyenDung.css">
 </head>
 <body>
+    <div class="header">
+        <img src="/img/Banner-back-to-school-1236x60.png" alt="">
+    </div>
     <div class="nav">
+        
         <ul id="main-menu">
             <li>
                 <a href="/html/TrangChu.html">
@@ -47,6 +51,74 @@
             </li>
         </ul>
     </div>
+    <div class="container my-4">
+        <!-- Search Bar -->
+        <div class="row mb-4">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Tìm kiếm...">
+            </div>
+            <div class="col-auto">
+                <button class="btn btn-danger">Tìm kiếm</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Filters -->
+            <div class="col-md-3">
+                <!-- Department Filter -->
+                <h5>PHÒNG BAN</h5>
+                <div class="mb-4">
+                    <div class="filter-item"><input type="checkbox"> <span class="ms-2">Modding (0)</span></div>
+                    <div class="filter-item"><input type="checkbox"> <span class="ms-2">Trung Tâm Bảo Hành (0)</span></div>
+                    <div class="filter-item"><input type="checkbox"> <span class="ms-2">Showroom An Dương Vương (0)</span></div>
+                    <div class="filter-item"><input type="checkbox"> <span class="ms-2">Phòng Quản Lý Sản Phẩm Ngành Hàng Peripheral (0)</span></div>
+                    <div class="filter-item"><input type="checkbox"> <span class="ms-2">E-Com (0)</span></div>
+                    <div class="filter-item"><input type="checkbox"> <span class="ms-2">Project (0)</span></div>
+                    <div class="filter-item"><input type="checkbox"> <span class="ms-2">Vận hành (0)</span></div>
+                </div>
+
+                <!-- Location Filter -->
+                <h5>ĐỊA ĐIỂM</h5>
+                <div>
+                    <div class="filter-item"><input type="checkbox"> <span class="ms-2">Hà Nội - Thái Hà</span></div>
+                    <div class="filter-item"><input type="checkbox"> <span class="ms-2">Hồ Chí Minh - Hoàng Hoa Thám</span></div>
+                    <div class="filter-item"><input type="checkbox"> <span class="ms-2">Hồ Chí Minh - Kha Vạn Cân</span></div>
+                    <div class="filter-item"><input type="checkbox"> <span class="ms-2">Hồ Chí Minh - Trần Hưng Đạo</span></div>
+                    <div class="filter-item"><input type="checkbox"> <span class="ms-2">Hồ Chí Minh - Hoàng Văn Thụ</span></div>
+                    <div class="filter-item"><input type="checkbox"> <span class="ms-2">Hồ Chí Minh - An Dương Vương</span></div>
+                </div>
+            </div>
+
+            <!-- Job Listings -->
+            <div class="col-md-9">
+                <h4 class="text-danger">CÁC CƠ HỘI VIỆC LÀM</h4>
+
+                <!-- Job Item 1 -->
+                <div class="border-bottom pb-3 mb-3">
+                    <div class="job-title">Cộng tác viên Bảo vệ - Cửa hàng Trần Hưng Đạo</div>
+                    <div class="job-location">Toàn thời gian | Hồ Chí Minh - Trần Hưng Đạo, 1081 - 1083 Trần Hưng Đạo, Phường 5, Quận 5, HCM</div>
+                    <div class="job-salary">Thương lượng</div>
+                    <div class="job-dates">17/10 - 16/11/2024</div>
+                </div>
+
+                <!-- Job Item 2 -->
+                <div class="border-bottom pb-3 mb-3">
+                    <div class="job-title">Software Engineer (Python/NodeJS)</div>
+                    <div class="job-location">Toàn thời gian | Hồ Chí Minh - Hoàng Hoa Thám, 78-80-82 Hoàng Hoa Thám, Phường 12, Quận Tân Bình, HCM</div>
+                    <div class="job-salary">Thương lượng</div>
+                    <div class="job-dates">22/10 - 14/11/2024</div>
+                </div>
+
+                <!-- Job Item 3 -->
+                <div class="border-bottom pb-3 mb-3">
+                    <div class="job-title">Nhân viên Kho - Cửa hàng Kha Vạn Cân</div>
+                    <div class="job-location">Toàn thời gian | Hồ Chí Minh - Kha Vạn Cân, 905 Kha Vạn Cân, Phường Linh Tây, Thành phố Thủ Đức</div>
+                    <div class="job-salary">8,000,000 – 11,000,000 VND</div>
+                    <div class="job-dates">27/10 - 10/11/2024</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     
@@ -59,7 +131,7 @@
                     <ul class="list-unstyled">
                         <li><a href="../html/GioiThieu.html" class="text-dark">Giới thiệu</a></li>
                         <li><a href="../html/TuyenDung.html" class="text-dark">Tuyển dụng</a></li>
-                        <li><a href="#" class="text-dark">Black Friday 2024</a></li>
+                        <li><a href="../html/BlackFriday.html" class="text-dark">Black Friday 2024</a></li>
                     </ul>
                 </div>
     
@@ -67,9 +139,9 @@
                 <div class="col-md-2 mb-3">
                     <h6 class="text-dark">CHÍNH SÁCH</h6>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-dark">Chính sách bảo hành</a></li>
-                        <li><a href="#" class="text-dark">Chính sách giao hàng</a></li>
-                        <li><a href="#" class="text-dark">Chính sách bảo mật</a></li>
+                        <li><a href="../html/ChinhSachBaoHanh.html" class="text-dark">Chính sách bảo hành</a></li>
+                        <li><a href="../html/ChinhSachGiaoHang.html" class="text-dark">Chính sách giao hàng</a></li>
+                        <li><a href="../html/ChinhSachBaoMat.html" class="text-dark">Chính sách bảo mật</a></li>
                     </ul>
                 </div>
     
@@ -77,11 +149,10 @@
                 <div class="col-md-2 mb-3">
                     <h6 class="text-dark">THÔNG TIN</h6>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-dark">Hệ thống cửa hàng</a></li>
-                        <li><a href="#" class="text-dark">Hướng dẫn mua hàng</a></li>
-                        <li><a href="#" class="text-dark">Hướng dẫn thanh toán</a></li>
-                        <li><a href="#" class="text-dark">Hướng dẫn trả góp</a></li>
-                        <li><a href="#" class="text-dark">Tra cứu địa chỉ bảo hành</a></li>
+                        <li><a href="../html/HuongDanMuaHang.html" class="text-dark">Hướng dẫn mua hàng</a></li>
+                        <li><a href="../html/HuongDanThanhToan.html" class="text-dark">Hướng dẫn thanh toán</a></li>
+                        <li><a href="../html/HuongDanTraGop.html" class="text-dark">Hướng dẫn trả góp</a></li>
+                        <li><a href="../html/TraCuuDiaChiBaoHanh.html" class="text-dark">Tra cứu địa chỉ bảo hành</a></li>
                     </ul>
                 </div>
     

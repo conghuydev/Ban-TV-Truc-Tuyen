@@ -176,6 +176,102 @@ function closeCartModal() {
 // Gán sự kiện click cho nút giỏ hàng
 document.getElementById('cart-button').addEventListener('click', openCartModal);
 
+document.getElementById('search-button').addEventListener('click', function(event) {
+    event.preventDefault(); // Ngăn chặn reload trang
+
+    const searchQuery = document.getElementById('search-input').value.toLowerCase();
+    const productList = document.querySelectorAll('.product-item'); // Giả sử mỗi sản phẩm có class "product-item"
+
+    productList.forEach(function(product) {
+        const productName = product.querySelector('.product-name').textContent.toLowerCase();
+
+        if (productName.includes(searchQuery)) {
+            product.style.display = 'block'; // Hiển thị sản phẩm
+        } else {
+            product.style.display = 'none'; // Ẩn sản phẩm
+        }
+    });
+});
+
+
+
+// Hàm xử lý khi đăng nhập thành công và cập nhật tên trên thanh menu
+function updateUserNameOnMenu(userName) {
+    const authText = document.getElementById('auth-text');
+    authText.innerHTML = `Xin chào, ${userName}`;
+    
+    // Ẩn các tùy chọn đăng nhập/đăng ký khi đã có tên người dùng
+    document.getElementById('login').style.display = 'none';
+    document.getElementById('signup').style.display = 'none';
+}
+
+// Kiểm tra tên người dùng khi tải trang (từ localStorage)
+window.onload = function() {
+    const userName = localStorage.getItem('userName');
+    if (userName) {
+        updateUserNameOnMenu(userName);
+    }
+}
+
+// Giả sử đây là đoạn mã xử lý khi người dùng nhấn nút Đăng ký
+document.getElementById('signup-button').addEventListener('click', function(e) {
+    e.preventDefault();
+
+    // Lấy tên người dùng từ ô nhập liệu (ví dụ với id là 'phone-signup')
+    const userName = document.getElementById('phone-signup').value;
+
+    // Lưu tên người dùng vào localStorage để lần sau vẫn hiển thị
+    localStorage.setItem('userName', userName);
+
+    // Cập nhật tên người dùng trên thanh menu ngay lập tức
+    updateUserNameOnMenu(userName);
+
+    // Đóng modal đăng ký nếu có
+    closeModal();
+});
+
+// Hàm xử lý khi đăng nhập thành công và cập nhật tên trên thanh menu
+function updateUserNameOnMenu(userName) {
+    const authText = document.getElementById('auth-text');
+    authText.innerHTML = `Xin chào, ${userName}`;
+    
+    // Ẩn các tùy chọn đăng nhập/đăng ký khi đã có tên người dùng
+    document.getElementById('login').style.display = 'none';
+    document.getElementById('signup').style.display = 'none';
+    
+    // Hiển thị nút Đăng xuất khi người dùng đã đăng nhập
+    document.getElementById('logout').style.display = 'inline-block';
+}
+
+// Hàm xử lý khi đăng xuất
+function logout() {
+    // Xóa tên người dùng khỏi localStorage
+    localStorage.removeItem('userName');
+    
+    // Khôi phục lại giao diện ban đầu
+    const authText = document.getElementById('auth-text');
+    authText.innerHTML = 'Đăng nhập / Đăng ký';
+    
+    // Hiển thị lại các mục đăng nhập và đăng ký
+    document.getElementById('login').style.display = 'inline-block';
+    document.getElementById('signup').style.display = 'inline-block';
+    
+    // Ẩn nút Đăng xuất
+    document.getElementById('logout').style.display = 'none';
+}
+
+// Kiểm tra tên người dùng khi tải trang (từ localStorage)
+window.onload = function() {
+    const userName = localStorage.getItem('userName');
+    if (userName) {
+        updateUserNameOnMenu(userName);
+    }
+}
+
+// Xử lý khi người dùng nhấn nút Đăng xuất
+document.getElementById('logout').addEventListener('click', function() {
+    logout();
+});
 
 
 
